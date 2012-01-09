@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="8.8.1" version="8.8.1" Modules="java" RootPath="." Language="en" Id="{0926401E-C345-4DF2-B585-285C376C5A57}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="Email Saroj Maharjan at sawrows@gmail.com"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/zoras/MusicAndMoviesManagement"/>
+    <ROW Property="Manufacturer" Value="CPS" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{C729BEF7-4E1E-4C90-99E5-209379190DA5} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Music And Movies Management System" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{A58C2433-5334-422C-96F1-FA6C22A393E0}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="MusicAndMoviesManagement_Dir" Directory_Parent="APPDIR" DefaultDir="MusicA~1|MusicAndMoviesManagement"/>
+    <ROW Directory="MusicAndMoviesManagement_lib_Dir" Directory_Parent="MusicAndMoviesManagement_Dir" DefaultDir="MusicA~1|MusicAndMoviesManagement_lib"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="bin_Dir" Directory_Parent="MusicAndMoviesManagement_Dir" DefaultDir="bin"/>
+    <ROW Directory="finalsem_1_Dir" Directory_Parent="prg_1_Dir" DefaultDir="finalsem"/>
+    <ROW Directory="finalsem_Dir" Directory_Parent="prg_Dir" DefaultDir="finalsem"/>
+    <ROW Directory="prg_1_Dir" Directory_Parent="src_Dir" DefaultDir="prg"/>
+    <ROW Directory="prg_Dir" Directory_Parent="bin_Dir" DefaultDir="prg"/>
+    <ROW Directory="settings_Dir" Directory_Parent="MusicAndMoviesManagement_Dir" DefaultDir="settin~1|.settings"/>
+    <ROW Directory="src_Dir" Directory_Parent="MusicAndMoviesManagement_Dir" DefaultDir="src"/>
+    <ROW Directory="student_1_Dir" Directory_Parent="finalsem_1_Dir" DefaultDir="student"/>
+    <ROW Directory="student_Dir" Directory_Parent="finalsem_Dir" DefaultDir="student"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AboutUs.java" ComponentId="{F08EEDF8-C3C2-4953-A1B9-C85D5ACAD17B}" Directory_="student_1_Dir" Attributes="0" KeyPath="AboutUs.java" Type="0"/>
+    <ROW Component="AboutUs1.class" ComponentId="{64EFDC33-611D-47F4-B789-1B987CD125AE}" Directory_="student_Dir" Attributes="0" KeyPath="AboutUs1.class" Type="0"/>
+    <ROW Component="MusicAndMoviesManagement.exe" ComponentId="{C3D398B0-8825-4F39-B4BD-F7D8E5C4B51A}" Directory_="APPDIR" Attributes="0" Condition="NOT VersionNT64" KeyPath="MusicAndMoviesManagement.exe"/>
+    <ROW Component="MusicAndMoviesManagement1.exe" ComponentId="{DB553BFE-C4E3-493F-83D3-7D9A23867ACA}" Directory_="APPDIR" Attributes="256" Condition="VersionNT64" KeyPath="MusicAndMoviesManagement1.exe"/>
+    <ROW Component="ProductInformation" ComponentId="{6385CE1C-AB77-4B90-9D19-CCB1465BF6E1}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="README.txt" ComponentId="{9BABD30F-1757-4500-BD2A-455DCCFFFEAC}" Directory_="MusicAndMoviesManagement_Dir" Attributes="0" KeyPath="README.txt"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{F85A6FB5-3F01-4511-9714-3353D883522D}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="classpath" ComponentId="{B6EAE874-78B7-47B9-B34F-5D00D8532D5B}" Directory_="MusicAndMoviesManagement_Dir" Attributes="0" KeyPath="classpath" Type="0"/>
+    <ROW Component="jdatepicker1.1.0.jar" ComponentId="{E3FA73AA-44DE-4521-91C0-1FE857A63F2B}" Directory_="MusicAndMoviesManagement_lib_Dir" Attributes="0" KeyPath="jdatepicker1.1.0.jar" Type="0"/>
+    <ROW Component="org.eclipse.jdt.core.prefs" ComponentId="{23E21A23-F9F5-401D-A4A2-DC76B6E92BEA}" Directory_="settings_Dir" Attributes="0" KeyPath="org.eclipse.jdt.core.prefs" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="AI32BitFiles" Title="32-bit" Description="32-bit Executables and Libraries" Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="MusicAndMoviesManagement.exe"/>
+    <ROW Feature="AI64BitFiles" Title="64-bit" Description="64-bit Executables and Libraries" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="MusicAndMoviesManagement1.exe"/>
+    <ROW Feature="AIOtherFiles" Title="Common" Description="Shared Resource and Regular Files" Display="7" Level="1" Directory_="APPDIR" Attributes="0" Components="AboutUs.java AboutUs1.class README.txt classpath jdatepicker1.1.0.jar org.eclipse.jdt.core.prefs"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="ProductInformation SHORTCUTDIR"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AboutUs.class" Component_="AboutUs1.class" FileName="AboutU~2.cla|AboutUs.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\AboutUs.class" SelfReg="false" NextFile="audio.ico"/>
+    <ROW File="AboutUs.java" Component_="AboutUs.java" FileName="AboutU~1.jav|AboutUs.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\AboutUs.java" SelfReg="false" NextFile="audio.ico_1"/>
+    <ROW File="AboutUs1.class" Component_="AboutUs1.class" FileName="AboutU~1.cla|AboutUs$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\AboutUs$1.class" SelfReg="false" NextFile="AboutUs.class"/>
+    <ROW File="Disc.class" Component_="AboutUs1.class" FileName="Disc~1.cla|Disc.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Disc.class" SelfReg="false" NextFile="Language1.class"/>
+    <ROW File="Disc.java" Component_="AboutUs.java" FileName="Disc~1.jav|Disc.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\Disc.java" SelfReg="false" NextFile="Language.java"/>
+    <ROW File="Disc1.class" Component_="AboutUs1.class" FileName="Disc$1~1.cla|Disc$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Disc$1.class" SelfReg="false" NextFile="Disc2.class"/>
+    <ROW File="Disc2.class" Component_="AboutUs1.class" FileName="Disc$2~1.cla|Disc$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Disc$2.class" SelfReg="false" NextFile="Disc3.class"/>
+    <ROW File="Disc3.class" Component_="AboutUs1.class" FileName="Disc$3~1.cla|Disc$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Disc$3.class" SelfReg="false" NextFile="Disc4.class"/>
+    <ROW File="Disc4.class" Component_="AboutUs1.class" FileName="Disc$4~1.cla|Disc$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Disc$4.class" SelfReg="false" NextFile="Disc.class"/>
+    <ROW File="Language.class" Component_="AboutUs1.class" FileName="Langua~5.cla|Language.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Language.class" SelfReg="false" NextFile="Login1.class"/>
+    <ROW File="Language.java" Component_="AboutUs.java" FileName="Langua~1.jav|Language.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\Language.java" SelfReg="false" NextFile="Login.java"/>
+    <ROW File="Language1.class" Component_="AboutUs1.class" FileName="Langua~1.cla|Language$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Language$1.class" SelfReg="false" NextFile="Language2.class"/>
+    <ROW File="Language2.class" Component_="AboutUs1.class" FileName="Langua~2.cla|Language$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Language$2.class" SelfReg="false" NextFile="Language3.class"/>
+    <ROW File="Language3.class" Component_="AboutUs1.class" FileName="Langua~3.cla|Language$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Language$3.class" SelfReg="false" NextFile="Language4.class"/>
+    <ROW File="Language4.class" Component_="AboutUs1.class" FileName="Langua~4.cla|Language$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Language$4.class" SelfReg="false" NextFile="Language.class"/>
+    <ROW File="Login.class" Component_="AboutUs1.class" FileName="Login~1.cla|Login.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Login.class" SelfReg="false" NextFile="MDIFrame1.class"/>
+    <ROW File="Login.java" Component_="AboutUs.java" FileName="Login~1.jav|Login.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\Login.java" SelfReg="false" NextFile="MDIFrame.java"/>
+    <ROW File="Login1.class" Component_="AboutUs1.class" FileName="Login$~1.cla|Login$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Login$1.class" SelfReg="false" NextFile="Login2.class"/>
+    <ROW File="Login2.class" Component_="AboutUs1.class" FileName="Login$~2.cla|Login$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Login$2.class" SelfReg="false" NextFile="Login.class"/>
+    <ROW File="MDIFrame.class" Component_="AboutUs1.class" FileName="MDIFr~15.cla|MDIFrame.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame.class" SelfReg="false" NextFile="Members1.class"/>
+    <ROW File="MDIFrame.java" Component_="AboutUs.java" FileName="MDIFra~1.jav|MDIFrame.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MDIFrame.java" SelfReg="false" NextFile="Members.java"/>
+    <ROW File="MDIFrame1.class" Component_="AboutUs1.class" FileName="MDIFra~1.cla|MDIFrame$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$1.class" SelfReg="false" NextFile="MDIFrame10.class"/>
+    <ROW File="MDIFrame10.class" Component_="AboutUs1.class" FileName="MDIFra~2.cla|MDIFrame$10.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$10.class" SelfReg="false" NextFile="MDIFrame11.class"/>
+    <ROW File="MDIFrame11.class" Component_="AboutUs1.class" FileName="MDIFra~3.cla|MDIFrame$11.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$11.class" SelfReg="false" NextFile="MDIFrame12.class"/>
+    <ROW File="MDIFrame12.class" Component_="AboutUs1.class" FileName="MDIFra~4.cla|MDIFrame$12.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$12.class" SelfReg="false" NextFile="MDIFrame13.class"/>
+    <ROW File="MDIFrame13.class" Component_="AboutUs1.class" FileName="MDIFra~5.cla|MDIFrame$13.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$13.class" SelfReg="false" NextFile="MDIFrame14.class"/>
+    <ROW File="MDIFrame14.class" Component_="AboutUs1.class" FileName="MDIFra~6.cla|MDIFrame$14.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$14.class" SelfReg="false" NextFile="MDIFrame2.class"/>
+    <ROW File="MDIFrame2.class" Component_="AboutUs1.class" FileName="MDIFra~7.cla|MDIFrame$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$2.class" SelfReg="false" NextFile="MDIFrame3.class"/>
+    <ROW File="MDIFrame3.class" Component_="AboutUs1.class" FileName="MDIFra~8.cla|MDIFrame$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$3.class" SelfReg="false" NextFile="MDIFrame4.class"/>
+    <ROW File="MDIFrame4.class" Component_="AboutUs1.class" FileName="MDIFra~9.cla|MDIFrame$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$4.class" SelfReg="false" NextFile="MDIFrame5.class"/>
+    <ROW File="MDIFrame5.class" Component_="AboutUs1.class" FileName="MDIFr~10.cla|MDIFrame$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$5.class" SelfReg="false" NextFile="MDIFrame6.class"/>
+    <ROW File="MDIFrame6.class" Component_="AboutUs1.class" FileName="MDIFr~11.cla|MDIFrame$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$6.class" SelfReg="false" NextFile="MDIFrame7.class"/>
+    <ROW File="MDIFrame7.class" Component_="AboutUs1.class" FileName="MDIFr~12.cla|MDIFrame$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$7.class" SelfReg="false" NextFile="MDIFrame8.class"/>
+    <ROW File="MDIFrame8.class" Component_="AboutUs1.class" FileName="MDIFr~13.cla|MDIFrame$8.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$8.class" SelfReg="false" NextFile="MDIFrame9.class"/>
+    <ROW File="MDIFrame9.class" Component_="AboutUs1.class" FileName="MDIFr~14.cla|MDIFrame$9.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MDIFrame$9.class" SelfReg="false" NextFile="MDIFrame.class"/>
+    <ROW File="Members.class" Component_="AboutUs1.class" FileName="Member~7.cla|Members.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members.class" SelfReg="false" NextFile="mm.gif"/>
+    <ROW File="Members.java" Component_="AboutUs.java" FileName="Member~1.jav|Members.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\Members.java" SelfReg="false" NextFile="mm.gif_1"/>
+    <ROW File="Members1.class" Component_="AboutUs1.class" FileName="Member~1.cla|Members$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$1.class" SelfReg="false" NextFile="Members2.class"/>
+    <ROW File="Members2.class" Component_="AboutUs1.class" FileName="Member~2.cla|Members$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$2.class" SelfReg="false" NextFile="Members3.class"/>
+    <ROW File="Members3.class" Component_="AboutUs1.class" FileName="Member~3.cla|Members$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$3.class" SelfReg="false" NextFile="Members4.class"/>
+    <ROW File="Members4.class" Component_="AboutUs1.class" FileName="Member~4.cla|Members$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$4.class" SelfReg="false" NextFile="Members5.class"/>
+    <ROW File="Members5.class" Component_="AboutUs1.class" FileName="Member~5.cla|Members$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$5.class" SelfReg="false" NextFile="Members6.class"/>
+    <ROW File="Members6.class" Component_="AboutUs1.class" FileName="Member~6.cla|Members$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Members$6.class" SelfReg="false" NextFile="Members.class"/>
+    <ROW File="MoviesIssueNReturn.class" Component_="AboutUs1.class" FileName="Movies~8.cla|MoviesIssueNReturn.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn.class" SelfReg="false" NextFile="MoviesSearch1.class"/>
+    <ROW File="MoviesIssueNReturn.java" Component_="AboutUs.java" FileName="Movies~1.jav|MoviesIssueNReturn.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MoviesIssueNReturn.java" SelfReg="false" NextFile="MoviesSearch.java"/>
+    <ROW File="MoviesIssueNReturn1.class" Component_="AboutUs1.class" FileName="Movies~1.cla|MoviesIssueNReturn$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$1.class" SelfReg="false" NextFile="MoviesIssueNReturn2.class"/>
+    <ROW File="MoviesIssueNReturn2.class" Component_="AboutUs1.class" FileName="Movies~2.cla|MoviesIssueNReturn$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$2.class" SelfReg="false" NextFile="MoviesIssueNReturn3.class"/>
+    <ROW File="MoviesIssueNReturn3.class" Component_="AboutUs1.class" FileName="Movies~3.cla|MoviesIssueNReturn$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$3.class" SelfReg="false" NextFile="MoviesIssueNReturn4.class"/>
+    <ROW File="MoviesIssueNReturn4.class" Component_="AboutUs1.class" FileName="Movies~4.cla|MoviesIssueNReturn$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$4.class" SelfReg="false" NextFile="MoviesIssueNReturn5.class"/>
+    <ROW File="MoviesIssueNReturn5.class" Component_="AboutUs1.class" FileName="Movies~5.cla|MoviesIssueNReturn$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$5.class" SelfReg="false" NextFile="MoviesIssueNReturn6.class"/>
+    <ROW File="MoviesIssueNReturn6.class" Component_="AboutUs1.class" FileName="Movies~6.cla|MoviesIssueNReturn$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$6.class" SelfReg="false" NextFile="MoviesIssueNReturn7.class"/>
+    <ROW File="MoviesIssueNReturn7.class" Component_="AboutUs1.class" FileName="Movies~7.cla|MoviesIssueNReturn$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesIssueNReturn$7.class" SelfReg="false" NextFile="MoviesIssueNReturn.class"/>
+    <ROW File="MoviesSearch.class" Component_="AboutUs1.class" FileName="Movie~19.cla|MoviesSearch.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch.class" SelfReg="false" NextFile="MoviesSetup1.class"/>
+    <ROW File="MoviesSearch.java" Component_="AboutUs.java" FileName="Movies~2.jav|MoviesSearch.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MoviesSearch.java" SelfReg="false" NextFile="MoviesSetup.java"/>
+    <ROW File="MoviesSearch1.class" Component_="AboutUs1.class" FileName="Movies~9.cla|MoviesSearch$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$1.class" SelfReg="false" NextFile="MoviesSearch10.class"/>
+    <ROW File="MoviesSearch10.class" Component_="AboutUs1.class" FileName="Movie~10.cla|MoviesSearch$10.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$10.class" SelfReg="false" NextFile="MoviesSearch2.class"/>
+    <ROW File="MoviesSearch2.class" Component_="AboutUs1.class" FileName="Movie~11.cla|MoviesSearch$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$2.class" SelfReg="false" NextFile="MoviesSearch3.class"/>
+    <ROW File="MoviesSearch3.class" Component_="AboutUs1.class" FileName="Movie~12.cla|MoviesSearch$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$3.class" SelfReg="false" NextFile="MoviesSearch4.class"/>
+    <ROW File="MoviesSearch4.class" Component_="AboutUs1.class" FileName="Movie~13.cla|MoviesSearch$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$4.class" SelfReg="false" NextFile="MoviesSearch5.class"/>
+    <ROW File="MoviesSearch5.class" Component_="AboutUs1.class" FileName="Movie~14.cla|MoviesSearch$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$5.class" SelfReg="false" NextFile="MoviesSearch6.class"/>
+    <ROW File="MoviesSearch6.class" Component_="AboutUs1.class" FileName="Movie~15.cla|MoviesSearch$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$6.class" SelfReg="false" NextFile="MoviesSearch7.class"/>
+    <ROW File="MoviesSearch7.class" Component_="AboutUs1.class" FileName="Movie~16.cla|MoviesSearch$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$7.class" SelfReg="false" NextFile="MoviesSearch8.class"/>
+    <ROW File="MoviesSearch8.class" Component_="AboutUs1.class" FileName="Movie~17.cla|MoviesSearch$8.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$8.class" SelfReg="false" NextFile="MoviesSearch9.class"/>
+    <ROW File="MoviesSearch9.class" Component_="AboutUs1.class" FileName="Movie~18.cla|MoviesSearch$9.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSearch$9.class" SelfReg="false" NextFile="MoviesSearch.class"/>
+    <ROW File="MoviesSetup.class" Component_="AboutUs1.class" FileName="Movie~26.cla|MoviesSetup.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup.class" SelfReg="false" NextFile="MoviesType1.class"/>
+    <ROW File="MoviesSetup.java" Component_="AboutUs.java" FileName="Movies~3.jav|MoviesSetup.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MoviesSetup.java" SelfReg="false" NextFile="MoviesType.java"/>
+    <ROW File="MoviesSetup1.class" Component_="AboutUs1.class" FileName="Movie~20.cla|MoviesSetup$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$1.class" SelfReg="false" NextFile="MoviesSetup2.class"/>
+    <ROW File="MoviesSetup2.class" Component_="AboutUs1.class" FileName="Movie~21.cla|MoviesSetup$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$2.class" SelfReg="false" NextFile="MoviesSetup3.class"/>
+    <ROW File="MoviesSetup3.class" Component_="AboutUs1.class" FileName="Movie~22.cla|MoviesSetup$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$3.class" SelfReg="false" NextFile="MoviesSetup4.class"/>
+    <ROW File="MoviesSetup4.class" Component_="AboutUs1.class" FileName="Movie~23.cla|MoviesSetup$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$4.class" SelfReg="false" NextFile="MoviesSetup5.class"/>
+    <ROW File="MoviesSetup5.class" Component_="AboutUs1.class" FileName="Movie~24.cla|MoviesSetup$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$5.class" SelfReg="false" NextFile="MoviesSetup6.class"/>
+    <ROW File="MoviesSetup6.class" Component_="AboutUs1.class" FileName="Movie~25.cla|MoviesSetup$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesSetup$6.class" SelfReg="false" NextFile="MoviesSetup.class"/>
+    <ROW File="MoviesType.class" Component_="AboutUs1.class" FileName="Movie~31.cla|MoviesType.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesType.class" SelfReg="false" NextFile="MusicGenre1.class"/>
+    <ROW File="MoviesType.java" Component_="AboutUs.java" FileName="Movies~4.jav|MoviesType.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MoviesType.java" SelfReg="false" NextFile="MusicGenre.java"/>
+    <ROW File="MoviesType1.class" Component_="AboutUs1.class" FileName="Movie~27.cla|MoviesType$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesType$1.class" SelfReg="false" NextFile="MoviesType2.class"/>
+    <ROW File="MoviesType2.class" Component_="AboutUs1.class" FileName="Movie~28.cla|MoviesType$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesType$2.class" SelfReg="false" NextFile="MoviesType3.class"/>
+    <ROW File="MoviesType3.class" Component_="AboutUs1.class" FileName="Movie~29.cla|MoviesType$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesType$3.class" SelfReg="false" NextFile="MoviesType4.class"/>
+    <ROW File="MoviesType4.class" Component_="AboutUs1.class" FileName="Movie~30.cla|MoviesType$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MoviesType$4.class" SelfReg="false" NextFile="MoviesType.class"/>
+    <ROW File="MusicAndMoviesManagement.exe" Component_="MusicAndMoviesManagement.exe" FileName="MusicA~1.exe|MusicAndMoviesManagement.exe" Attributes="0" SourcePath="&lt;AI_STUBS_32U&gt;aijclw.exe" SelfReg="false" NextFile="MusicAndMoviesManagement1.exe" DigSign="true"/>
+    <ROW File="MusicAndMoviesManagement.jar" Component_="classpath" FileName="MusicA~1.jar|MusicAndMoviesManagement.jar" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement.jar" SelfReg="false" NextFile="MusicAndMoviesManagement.exe"/>
+    <ROW File="MusicAndMoviesManagement1.exe" Component_="MusicAndMoviesManagement1.exe" FileName="MusicA~2.exe|MusicAndMoviesManagement 64.exe" Attributes="0" SourcePath="&lt;AI_STUBS_64&gt;aijclw.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="MusicGenre.class" Component_="AboutUs1.class" FileName="MusicG~5.cla|MusicGenre.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicGenre.class" SelfReg="false" NextFile="MusicIssueNReturn1.class"/>
+    <ROW File="MusicGenre.java" Component_="AboutUs.java" FileName="MusicG~1.jav|MusicGenre.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicGenre.java" SelfReg="false" NextFile="MusicIssueNReturn.java"/>
+    <ROW File="MusicGenre1.class" Component_="AboutUs1.class" FileName="MusicG~1.cla|MusicGenre$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicGenre$1.class" SelfReg="false" NextFile="MusicGenre2.class"/>
+    <ROW File="MusicGenre2.class" Component_="AboutUs1.class" FileName="MusicG~2.cla|MusicGenre$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicGenre$2.class" SelfReg="false" NextFile="MusicGenre3.class"/>
+    <ROW File="MusicGenre3.class" Component_="AboutUs1.class" FileName="MusicG~3.cla|MusicGenre$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicGenre$3.class" SelfReg="false" NextFile="MusicGenre4.class"/>
+    <ROW File="MusicGenre4.class" Component_="AboutUs1.class" FileName="MusicG~4.cla|MusicGenre$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicGenre$4.class" SelfReg="false" NextFile="MusicGenre.class"/>
+    <ROW File="MusicIssueNReturn.class" Component_="AboutUs1.class" FileName="MusicI~8.cla|MusicIssueNReturn.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn.class" SelfReg="false" NextFile="MusicMoviesTableModel.class"/>
+    <ROW File="MusicIssueNReturn.java" Component_="AboutUs.java" FileName="MusicI~1.jav|MusicIssueNReturn.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicIssueNReturn.java" SelfReg="false" NextFile="MusicMoviesTableModel.java"/>
+    <ROW File="MusicIssueNReturn1.class" Component_="AboutUs1.class" FileName="MusicI~1.cla|MusicIssueNReturn$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$1.class" SelfReg="false" NextFile="MusicIssueNReturn2.class"/>
+    <ROW File="MusicIssueNReturn2.class" Component_="AboutUs1.class" FileName="MusicI~2.cla|MusicIssueNReturn$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$2.class" SelfReg="false" NextFile="MusicIssueNReturn3.class"/>
+    <ROW File="MusicIssueNReturn3.class" Component_="AboutUs1.class" FileName="MusicI~3.cla|MusicIssueNReturn$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$3.class" SelfReg="false" NextFile="MusicIssueNReturn4.class"/>
+    <ROW File="MusicIssueNReturn4.class" Component_="AboutUs1.class" FileName="MusicI~4.cla|MusicIssueNReturn$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$4.class" SelfReg="false" NextFile="MusicIssueNReturn5.class"/>
+    <ROW File="MusicIssueNReturn5.class" Component_="AboutUs1.class" FileName="MusicI~5.cla|MusicIssueNReturn$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$5.class" SelfReg="false" NextFile="MusicIssueNReturn6.class"/>
+    <ROW File="MusicIssueNReturn6.class" Component_="AboutUs1.class" FileName="MusicI~6.cla|MusicIssueNReturn$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$6.class" SelfReg="false" NextFile="MusicIssueNReturn7.class"/>
+    <ROW File="MusicIssueNReturn7.class" Component_="AboutUs1.class" FileName="MusicI~7.cla|MusicIssueNReturn$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicIssueNReturn$7.class" SelfReg="false" NextFile="MusicIssueNReturn.class"/>
+    <ROW File="MusicMoviesTableModel.class" Component_="AboutUs1.class" FileName="MusicM~1.cla|MusicMoviesTableModel.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicMoviesTableModel.class" SelfReg="false" NextFile="MusicSearch1.class"/>
+    <ROW File="MusicMoviesTableModel.java" Component_="AboutUs.java" FileName="MusicM~1.jav|MusicMoviesTableModel.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicMoviesTableModel.java" SelfReg="false" NextFile="MusicSearch.java"/>
+    <ROW File="MusicSearch.class" Component_="AboutUs1.class" FileName="Music~11.cla|MusicSearch.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch.class" SelfReg="false" NextFile="MusicSetup1.class"/>
+    <ROW File="MusicSearch.java" Component_="AboutUs.java" FileName="MusicS~1.jav|MusicSearch.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicSearch.java" SelfReg="false" NextFile="MusicSetup.java"/>
+    <ROW File="MusicSearch1.class" Component_="AboutUs1.class" FileName="MusicS~1.cla|MusicSearch$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$1.class" SelfReg="false" NextFile="MusicSearch10.class"/>
+    <ROW File="MusicSearch10.class" Component_="AboutUs1.class" FileName="MusicS~2.cla|MusicSearch$10.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$10.class" SelfReg="false" NextFile="MusicSearch2.class"/>
+    <ROW File="MusicSearch2.class" Component_="AboutUs1.class" FileName="MusicS~3.cla|MusicSearch$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$2.class" SelfReg="false" NextFile="MusicSearch3.class"/>
+    <ROW File="MusicSearch3.class" Component_="AboutUs1.class" FileName="MusicS~4.cla|MusicSearch$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$3.class" SelfReg="false" NextFile="MusicSearch4.class"/>
+    <ROW File="MusicSearch4.class" Component_="AboutUs1.class" FileName="MusicS~5.cla|MusicSearch$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$4.class" SelfReg="false" NextFile="MusicSearch5.class"/>
+    <ROW File="MusicSearch5.class" Component_="AboutUs1.class" FileName="MusicS~6.cla|MusicSearch$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$5.class" SelfReg="false" NextFile="MusicSearch6.class"/>
+    <ROW File="MusicSearch6.class" Component_="AboutUs1.class" FileName="MusicS~7.cla|MusicSearch$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$6.class" SelfReg="false" NextFile="MusicSearch7.class"/>
+    <ROW File="MusicSearch7.class" Component_="AboutUs1.class" FileName="MusicS~8.cla|MusicSearch$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$7.class" SelfReg="false" NextFile="MusicSearch8.class"/>
+    <ROW File="MusicSearch8.class" Component_="AboutUs1.class" FileName="MusicS~9.cla|MusicSearch$8.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$8.class" SelfReg="false" NextFile="MusicSearch9.class"/>
+    <ROW File="MusicSearch9.class" Component_="AboutUs1.class" FileName="Music~10.cla|MusicSearch$9.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSearch$9.class" SelfReg="false" NextFile="MusicSearch.class"/>
+    <ROW File="MusicSetup.class" Component_="AboutUs1.class" FileName="Music~19.cla|MusicSetup.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup.class" SelfReg="false" NextFile="MusicType1.class"/>
+    <ROW File="MusicSetup.java" Component_="AboutUs.java" FileName="MusicS~2.jav|MusicSetup.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicSetup.java" SelfReg="false" NextFile="MusicType.java"/>
+    <ROW File="MusicSetup1.class" Component_="AboutUs1.class" FileName="Music~12.cla|MusicSetup$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$1.class" SelfReg="false" NextFile="MusicSetup2.class"/>
+    <ROW File="MusicSetup2.class" Component_="AboutUs1.class" FileName="Music~13.cla|MusicSetup$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$2.class" SelfReg="false" NextFile="MusicSetup3.class"/>
+    <ROW File="MusicSetup3.class" Component_="AboutUs1.class" FileName="Music~14.cla|MusicSetup$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$3.class" SelfReg="false" NextFile="MusicSetup4.class"/>
+    <ROW File="MusicSetup4.class" Component_="AboutUs1.class" FileName="Music~15.cla|MusicSetup$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$4.class" SelfReg="false" NextFile="MusicSetup5.class"/>
+    <ROW File="MusicSetup5.class" Component_="AboutUs1.class" FileName="Music~16.cla|MusicSetup$5.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$5.class" SelfReg="false" NextFile="MusicSetup6.class"/>
+    <ROW File="MusicSetup6.class" Component_="AboutUs1.class" FileName="Music~17.cla|MusicSetup$6.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$6.class" SelfReg="false" NextFile="MusicSetup7.class"/>
+    <ROW File="MusicSetup7.class" Component_="AboutUs1.class" FileName="Music~18.cla|MusicSetup$7.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicSetup$7.class" SelfReg="false" NextFile="MusicSetup.class"/>
+    <ROW File="MusicType.class" Component_="AboutUs1.class" FileName="MusicT~5.cla|MusicType.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicType.class" SelfReg="false" NextFile="Splash1.class"/>
+    <ROW File="MusicType.java" Component_="AboutUs.java" FileName="MusicT~1.jav|MusicType.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\MusicType.java" SelfReg="false" NextFile="Splash.java"/>
+    <ROW File="MusicType1.class" Component_="AboutUs1.class" FileName="MusicT~1.cla|MusicType$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicType$1.class" SelfReg="false" NextFile="MusicType2.class"/>
+    <ROW File="MusicType2.class" Component_="AboutUs1.class" FileName="MusicT~2.cla|MusicType$2.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicType$2.class" SelfReg="false" NextFile="MusicType3.class"/>
+    <ROW File="MusicType3.class" Component_="AboutUs1.class" FileName="MusicT~3.cla|MusicType$3.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicType$3.class" SelfReg="false" NextFile="MusicType4.class"/>
+    <ROW File="MusicType4.class" Component_="AboutUs1.class" FileName="MusicT~4.cla|MusicType$4.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\MusicType$4.class" SelfReg="false" NextFile="MusicType.class"/>
+    <ROW File="README.txt" Component_="README.txt" FileName="README.txt" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\README.txt" SelfReg="false" NextFile="AboutUs.java"/>
+    <ROW File="Splash.class" Component_="AboutUs1.class" FileName="Splash~2.cla|Splash.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Splash.class" SelfReg="false" NextFile="README.txt"/>
+    <ROW File="Splash.java" Component_="AboutUs.java" FileName="Splash~1.jav|Splash.java" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\Splash.java" SelfReg="false" NextFile="jdatepicker1.1.0.jar"/>
+    <ROW File="Splash1.class" Component_="AboutUs1.class" FileName="Splash~1.cla|Splash$1.class" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\Splash$1.class" SelfReg="false" NextFile="Splash.class"/>
+    <ROW File="SwingExtras.jar" Component_="jdatepicker1.1.0.jar" FileName="SwingE~1.jar|SwingExtras.jar" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement_lib\SwingExtras.jar" SelfReg="false" NextFile="MusicAndMoviesManagement.jar"/>
+    <ROW File="audio.ico" Component_="AboutUs1.class" FileName="audio.ico" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\audio.ico" SelfReg="false" NextFile="Disc1.class"/>
+    <ROW File="audio.ico_1" Component_="AboutUs.java" FileName="audio.ico" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\audio.ico" SelfReg="false" NextFile="Disc.java"/>
+    <ROW File="classpath" Component_="classpath" FileName="classp~1|.classpath" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\.classpath" SelfReg="false" NextFile="gitignore"/>
+    <ROW File="gitignore" Component_="classpath" FileName="gitign~1|.gitignore" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\.gitignore" SelfReg="false" NextFile="project"/>
+    <ROW File="jdatepicker1.1.0.jar" Component_="jdatepicker1.1.0.jar" FileName="jdatep~1.jar|jdatepicker-1.1.0.jar" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement_lib\jdatepicker-1.1.0.jar" SelfReg="false" NextFile="mysql.jar"/>
+    <ROW File="mm.gif" Component_="AboutUs1.class" FileName="mm.gif" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\bin\prg\finalsem\student\mm.gif" SelfReg="false" NextFile="MoviesIssueNReturn1.class"/>
+    <ROW File="mm.gif_1" Component_="AboutUs.java" FileName="mm.gif" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\src\prg\finalsem\student\mm.gif" SelfReg="false" NextFile="MoviesIssueNReturn.java"/>
+    <ROW File="mysql.jar" Component_="jdatepicker1.1.0.jar" FileName="mysql.jar" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement_lib\mysql.jar" SelfReg="false" NextFile="SwingExtras.jar"/>
+    <ROW File="org.eclipse.jdt.core.prefs" Component_="org.eclipse.jdt.core.prefs" FileName="orgecl~1.pre|org.eclipse.jdt.core.prefs" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\.settings\org.eclipse.jdt.core.prefs" SelfReg="false" NextFile="AboutUs1.class"/>
+    <ROW File="project" Component_="classpath" FileName="projec~1|.project" Attributes="0" SourcePath="..\Desktop\MusicAndMoviesManagement\MusicAndMoviesManagement\.project" SelfReg="false" NextFile="org.eclipse.jdt.core.prefs"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" MsiPackageType="AI_ALL" UACExecutionLevel="3"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiConditionComponent">
+    <ROW Feature_="AI64BitFiles" Level="0" Condition="NOT VersionNT64"/>
+    <ROW Feature_="AI32BitFiles" Level="0" Condition="VersionNT64"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="301"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SETPROGRAMFILES" Type="51" Source="AI_ProgramFiles" Target="[ProgramFilesFolder]"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Type="51" Source="AI_ProgramFiles" Target="[ProgramFiles64Folder]"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[AI_ProgramFiles][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="MusicAndMoviesManagement.exe" SourcePath="audio.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="ApplicationType" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="ApplicationType_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="ClassPath" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[#mysql.jar];[#SwingExtras.jar];[#jdatepicker1.1.0.jar];[#MusicAndMoviesManagement.jar];" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="ClassPath_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[#mysql.jar];[#SwingExtras.jar];[#jdatepicker1.1.0.jar];[#MusicAndMoviesManagement.jar];" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="FailureCheck" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="FailureCheck_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="MainClass" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="prg.finalsem.student.Splash" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="MainClass_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="prg.finalsem.student.Splash" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="MaximumVersion" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="1.7" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="MaximumVersion_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="1.7" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="MinimumVersion" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Minimum Version" Value="1.6" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="MinimumVersion_1" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Minimum Version" Value="1.6" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="PrefferNativeSplashScreen" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Display" Key="Preffer Native Splash Screen" Value="Yes" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="PrefferNativeSplashScreen_1" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Display" Key="Preffer Native Splash Screen" Value="Yes" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="SplashScreen" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Display" Key="Splash Screen" Value="[#mm.gif_1]" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="SplashScreenShadow" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Display" Key="Splash Screen Shadow" Value="true" Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="SplashScreenShadow_1" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Display" Key="Splash Screen Shadow" Value="true" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="SplashScreen_1" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Display" Key="Splash Screen" Value="[#mm.gif_1]" Action="0" Component_="MusicAndMoviesManagement.exe"/>
+    <ROW IniFile="VirtualMachineParameters" FileName="MusicA~3.ini|MusicAndMoviesManagement 64.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Virtual Machine Parameters" Value="-Xms64M -Xmx256M " Action="0" Component_="MusicAndMoviesManagement1.exe"/>
+    <ROW IniFile="VirtualMachineParameters_1" FileName="MusicA~2.ini|MusicAndMoviesManagement.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Virtual Machine Parameters" Value="-Xms64M -Xmx256M " Action="0" Component_="MusicAndMoviesManagement.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="747"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="748"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="749"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="747"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="748"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="749"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiJavaComponent">
+    <ROW Name="MusicAndMoviesManagement (1).exe" Launcher="MusicAndMoviesManagement1.exe" MainClass="MainClass_1" ClassPath="ClassPath_1" VMParams="VirtualMachineParameters" JREMin="MinimumVersion_1" JREMax="MaximumVersion_1" SplashScreen="SplashScreen" SplashShadow="SplashScreenShadow" IconPath="audio.ico" AppType="ApplicationType_1" PlusList="APPDIR;" MinusList="#MusicAndMoviesManagement.exe;" MacDescription="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2012" MacBundleId="com.[|Manufacturer].[|ProductName].[|CurrentJavaProductName]" FailureCheck="FailureCheck_1" UACExecutionLevel="0" NativeSplashScreen="PrefferNativeSplashScreen" Platform64="true" AnyPlatform="true" SynchMask="-15431817626515"/>
+    <ROW Name="MusicAndMoviesManagement.exe" Launcher="MusicAndMoviesManagement.exe" MainClass="MainClass" ClassPath="ClassPath" VMParams="VirtualMachineParameters_1" JREMin="MinimumVersion" JREMax="MaximumVersion" SplashScreen="SplashScreen_1" SplashShadow="SplashScreenShadow_1" IconPath="audio.ico" AppType="ApplicationType" PlusList="APPDIR;" MinusList="#MusicAndMoviesManagement.exe;#MusicAndMoviesManagement1.exe;" MacDescription="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2012" MacBundleId="com.[|Manufacturer].[|ProductName].[|CurrentJavaProductName]" FailureCheck="FailureCheck" UACExecutionLevel="0" NativeSplashScreen="PrefferNativeSplashScreen_1" AnyPlatform="true" Pair64="MusicAndMoviesManagement (1).exe" Children="MusicAndMoviesManagement (1).exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="MusicAndMoviesManagement64bit" Directory_="SHORTCUTDIR" Name="MusicA~1|Music And Movies Management 64 - bit" Component_="MusicAndMoviesManagement1.exe" Target="[#MusicAndMoviesManagement1.exe]" Description="Music And Movies Management System 64 - bit" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="MusicNMoviesManagement" Directory_="SHORTCUTDIR" Name="MusicN~1|Music N&apos; Movies Management" Component_="MusicAndMoviesManagement.exe" Target="[#MusicAndMoviesManagement.exe]" Description="Music N&apos; Movies Management System" Hotkey="0" Icon_="MusicAndMoviesManagement.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="README" Directory_="SHORTCUTDIR" Name="README" Component_="README.txt" Target="[#README.txt]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="MusicAndMoviesManagement_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
