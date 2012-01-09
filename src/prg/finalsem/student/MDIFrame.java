@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyVetoException;
 
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -33,8 +34,8 @@ public class MDIFrame extends JFrame {
         paneDesktop = new JDesktopPane();
         paneDesktop.setBackground(Color.DARK_GRAY);
 //        {
-//	        ImageIcon bg = new ImageIcon("images.jpg"); 
-//	        public void paintComponent(Graphics g) {
+//        	ImageIcon bg = new ImageIcon("audio.ico");
+//	        public void paintComponents(Graphics g) {
 //	             super.paintComponents(g);
 //	             g.drawImage(bg.getImage(), 0, 0, paneDesktop );
 //	        }
