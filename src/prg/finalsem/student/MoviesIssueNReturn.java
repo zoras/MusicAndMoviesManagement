@@ -100,7 +100,7 @@ public class MoviesIssueNReturn extends JInternalFrame {
     	String value1 = "";
     	try {
     		Class.forName(driver);
-			Connection con = DriverManager.getConnection(url,"root","");
+			Connection con = DriverManager.getConnection(url,"root","a1");
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("Select " + targetField + " from " + tableName + " where " + field + " ='" + value + "'");
 			while(rs.next()) {
